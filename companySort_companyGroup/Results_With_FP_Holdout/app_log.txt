@@ -1,0 +1,385 @@
+
+[2026-06-28 12:07:09] ..:: Start Data_Labeling "Main_Data_new" by "['R2', 'B2']" ::..
+[2026-06-28 12:07:10] ..:: End Data_Labeling "Main_Data_new" by "['R2', 'B2']" ::..
+[2026-06-28 12:07:10] ..:: Start Data_Preparation "Main_Data_new" for r_dicho (HOLDOUT | random_state: 42 | preprocessing: Standard) ::..
+[2026-06-28 12:07:10] ==> "Main_Data_new" shape: (969, 51)
+[2026-06-28 12:07:10] Using Hold-out (test_size=0.25)
+[2026-06-28 12:07:10] ==> Holdout >> train: (703, 51), test: (266, 51)
+[2026-06-28 12:07:10] ..:: End Data_Preparation for r_dicho ::..
+[2026-06-28 12:07:10] ..:: Start Data_Preparation "Main_Data_new" for b_dicho (HOLDOUT | random_state: 42 | preprocessing: Standard) ::..
+[2026-06-28 12:07:10] ==> "Main_Data_new" shape: (969, 51)
+[2026-06-28 12:07:10] Using Hold-out (test_size=0.25)
+[2026-06-28 12:07:10] ==> Holdout >> train: (703, 51), test: (266, 51)
+[2026-06-28 12:07:10] ..:: End Data_Preparation for b_dicho ::..
+[2026-06-28 12:07:10] ..:: Start FP_Augmentation on "Main_Data_new" for r_dicho (mining: fpgrowth, mode: both, min_support: 0.15) ::..
+[2026-06-28 12:07:10]   -> Processing fold 1 ...
+[2026-06-28 12:09:47] ..:: Start Data_Labeling "Main_Data_new" by "['R2', 'B2']" ::..
+[2026-06-28 12:09:48] ..:: End Data_Labeling "Main_Data_new" by "['R2', 'B2']" ::..
+[2026-06-28 12:09:48] ..:: Start Data_Preparation "Main_Data_new" for r_dicho (HOLDOUT | random_state: 42 | preprocessing: Standard) ::..
+[2026-06-28 12:09:48] ==> "Main_Data_new" shape: (969, 51)
+[2026-06-28 12:09:48] Using Hold-out (test_size=0.25)
+[2026-06-28 12:09:48] ==> Holdout >> train: (703, 51), test: (266, 51)
+[2026-06-28 12:09:48] ..:: End Data_Preparation for r_dicho ::..
+[2026-06-28 12:09:48] ..:: Start Data_Preparation "Main_Data_new" for b_dicho (HOLDOUT | random_state: 42 | preprocessing: Standard) ::..
+[2026-06-28 12:09:48] ==> "Main_Data_new" shape: (969, 51)
+[2026-06-28 12:09:48] Using Hold-out (test_size=0.25)
+[2026-06-28 12:09:48] ==> Holdout >> train: (703, 51), test: (266, 51)
+[2026-06-28 12:09:48] ..:: End Data_Preparation for b_dicho ::..
+[2026-06-28 12:09:48] ..:: Start FP_Augmentation on "Main_Data_new" for r_dicho (mining: fpgrowth, mode: both, min_support: 0.15) ::..
+[2026-06-28 12:09:48]   -> Processing fold 1 ...
+[2026-06-28 12:09:49]     Found 3553 frequent itemset(s).
+[2026-06-28 12:10:05]     Generated 5872 rule feature(s).
+[2026-06-28 12:10:07]     Fold 1 augmented — train: (703, 9476), test: (266, 9476)
+[2026-06-28 12:10:07] ..:: End FP_Augmentation on "Main_Data_new" for r_dicho ::..
+[2026-06-28 12:10:07] ..:: Start FP_Augmentation on "Main_Data_new" for b_dicho (mining: fpgrowth, mode: both, min_support: 0.15) ::..
+[2026-06-28 12:10:07]   -> Processing fold 1 ...
+[2026-06-28 12:10:08]     Found 3641 frequent itemset(s).
+[2026-06-28 12:10:24]     Generated 6213 rule feature(s).
+[2026-06-28 12:10:27]     Fold 1 augmented — train: (703, 9905), test: (266, 9905)
+[2026-06-28 12:10:27] ..:: End FP_Augmentation on "Main_Data_new" for b_dicho ::..
+[2026-06-28 12:10:27] ..:: Start ML for r_dicho ::..
+[2026-06-28 12:10:27] ..:: Running DT ::..
+[2026-06-28 12:10:48] 
+..:: DT Classifier Mean Results ::..
+==> Cross Validation Accuracy : 95.06% ± 1.4
+==> Test Accuracy             : 93.98% ± 0.0
+==> F1                        : 95.35% ± 0.0
+==> Precision                 : 93.18% ± 0.0
+==> Recall                    : 97.62% ± 0.0
+==> ROC-AUC                   : 92.69% ± 0.0
+==> AUPR                      : 96.15% ± 0.0
+
+[2026-06-28 12:10:48] ..:: Running RF ::..
+[2026-06-28 12:11:09] 
+..:: RF Classifier Mean Results ::..
+==> Cross Validation Accuracy : 83.08% ± 0.25
+==> Test Accuracy             : 83.46% ± 0.0
+==> F1                        : 86.67% ± 0.0
+==> Precision                 : 88.27% ± 0.0
+==> Recall                    : 85.12% ± 0.0
+==> ROC-AUC                   : 92.77% ± 0.0
+==> AUPR                      : 94.98% ± 0.0
+
+[2026-06-28 12:11:09] ..:: Running HGB ::..
+[2026-06-28 12:19:22] 
+..:: HGB Classifier Mean Results ::..
+==> Cross Validation Accuracy : 98.01% ± 0.0
+==> Test Accuracy             : 97.37% ± 0.0
+==> F1                        : 97.96% ± 0.0
+==> Precision                 : 96.0% ± 0.0
+==> Recall                    : 100.0% ± 0.0
+==> ROC-AUC                   : 99.82% ± 0.0
+==> AUPR                      : 99.9% ± 0.0
+
+[2026-06-28 12:19:23] ..:: End ML for r_dicho ::..
+[2026-06-28 12:19:23] ..:: Start ML for b_dicho ::..
+[2026-06-28 12:19:23] ..:: Running DT ::..
+[2026-06-28 12:19:40] 
+..:: DT Classifier Mean Results ::..
+==> Cross Validation Accuracy : 100.0% ± 0.0
+==> Test Accuracy             : 99.62% ± 0.0
+==> F1                        : 99.72% ± 0.0
+==> Precision                 : 99.45% ± 0.0
+==> Recall                    : 100.0% ± 0.0
+==> ROC-AUC                   : 99.41% ± 0.0
+==> AUPR                      : 99.73% ± 0.0
+
+[2026-06-28 12:19:40] ..:: Running RF ::..
+[2026-06-28 12:20:01] 
+..:: RF Classifier Mean Results ::..
+==> Cross Validation Accuracy : 72.28% ± 1.25
+==> Test Accuracy             : 80.83% ± 0.0
+==> F1                        : 86.4% ± 0.0
+==> Precision                 : 83.51% ± 0.0
+==> Recall                    : 89.5% ± 0.0
+==> ROC-AUC                   : 84.43% ± 0.0
+==> AUPR                      : 90.25% ± 0.0
+
+[2026-06-28 12:20:02] ..:: Running HGB ::..
+[2026-06-28 12:25:50] 
+..:: HGB Classifier Mean Results ::..
+==> Cross Validation Accuracy : 99.43% ± 0.0
+==> Test Accuracy             : 99.62% ± 0.0
+==> F1                        : 99.72% ± 0.0
+==> Precision                 : 99.45% ± 0.0
+==> Recall                    : 100.0% ± 0.0
+==> ROC-AUC                   : 100.0% ± 0.0
+==> AUPR                      : 100.0% ± 0.0
+
+[2026-06-28 12:25:52] ..:: End ML for b_dicho ::..
+[2026-06-28 20:39:47] ..:: Start Data_Labeling "Main_Data_new" by "['R2', 'B2']" ::..
+[2026-06-28 20:39:47] ..:: End Data_Labeling "Main_Data_new" by "['R2', 'B2']" ::..
+[2026-06-28 20:39:47] ..:: Start Data_Preparation "Main_Data_new" for r_dicho (HOLDOUT | random_state: 42 | preprocessing: Standard) ::..
+[2026-06-28 20:39:47] ==> "Main_Data_new" shape: (969, 51)
+[2026-06-28 20:39:47] Using Hold-out (test_size=0.25)
+[2026-06-28 20:39:47] ==> Holdout >> train: (703, 51), test: (266, 51)
+[2026-06-28 20:39:47] ..:: End Data_Preparation for r_dicho ::..
+[2026-06-28 20:39:47] ..:: Start Data_Preparation "Main_Data_new" for b_dicho (HOLDOUT | random_state: 42 | preprocessing: Standard) ::..
+[2026-06-28 20:39:47] ==> "Main_Data_new" shape: (969, 51)
+[2026-06-28 20:39:47] Using Hold-out (test_size=0.25)
+[2026-06-28 20:39:47] ==> Holdout >> train: (703, 51), test: (266, 51)
+[2026-06-28 20:39:48] ..:: End Data_Preparation for b_dicho ::..
+[2026-06-28 20:39:48] ..:: Start FP_Augmentation on "Main_Data_new" for r_dicho (mining: fpgrowth, mode: both, min_support: 0.15) ::..
+[2026-06-28 20:39:48]   -> Processing fold 1 ...
+[2026-06-28 20:39:48]     Found 3553 frequent itemset(s).
+[2026-06-28 20:40:04]     Generated 5872 rule feature(s).
+[2026-06-28 20:40:07]     Fold 1 augmented — train: (703, 9476), test: (266, 9476)
+[2026-06-28 20:40:07] ..:: End FP_Augmentation on "Main_Data_new" for r_dicho ::..
+[2026-06-28 20:40:07] ..:: Start FP_Augmentation on "Main_Data_new" for b_dicho (mining: fpgrowth, mode: both, min_support: 0.15) ::..
+[2026-06-28 20:40:07]   -> Processing fold 1 ...
+[2026-06-28 20:40:07]     Found 3641 frequent itemset(s).
+[2026-06-28 20:40:23]     Generated 6213 rule feature(s).
+[2026-06-28 20:40:26]     Fold 1 augmented — train: (703, 9905), test: (266, 9905)
+[2026-06-28 20:40:26] ..:: End FP_Augmentation on "Main_Data_new" for b_dicho ::..
+[2026-06-28 20:40:26] ..:: Start ML for r_dicho ::..
+[2026-06-28 20:40:26] ..:: Running DT ::..
+[2026-06-28 20:41:40] 
+..:: DT Classifier Mean Results ::..
+==> Cross Validation Accuracy : 82.19% ± 7.15
+==> Test Accuracy             : 93.61% ± 0.0
+==> F1                        : 95.1% ± 0.0
+==> Precision                 : 92.18% ± 0.0
+==> Recall                    : 98.21% ± 0.0
+==> ROC-AUC                   : 91.96% ± 0.0
+==> AUPR                      : 95.76% ± 0.0
+
+[2026-06-28 20:41:41] ..:: Running LR ::..
+[2026-06-28 20:43:30] 
+..:: LR Classifier Mean Results ::..
+==> Cross Validation Accuracy : 93.27% ± 0.47
+==> Test Accuracy             : 93.98% ± 0.0
+==> F1                        : 95.21% ± 0.0
+==> Precision                 : 95.78% ± 0.0
+==> Recall                    : 94.64% ± 0.0
+==> ROC-AUC                   : 98.38% ± 0.0
+==> AUPR                      : 98.55% ± 0.0
+
+[2026-06-28 20:43:31] ..:: Running RF ::..
+[2026-06-28 20:45:57] 
+..:: RF Classifier Mean Results ::..
+==> Cross Validation Accuracy : 85.78% ± 7.6
+==> Test Accuracy             : 97.37% ± 0.0
+==> F1                        : 97.94% ± 0.0
+==> Precision                 : 97.08% ± 0.0
+==> Recall                    : 98.81% ± 0.0
+==> ROC-AUC                   : 99.86% ± 0.0
+==> AUPR                      : 99.92% ± 0.0
+
+[2026-06-28 20:45:58] ..:: Running SVM ::..
+[2026-06-28 20:48:20] 
+..:: SVM Classifier Mean Results ::..
+==> Cross Validation Accuracy : 78.07% ± 16.54
+==> Test Accuracy             : 94.36% ± 0.0
+==> F1                        : 95.68% ± 0.0
+==> Precision                 : 92.74% ± 0.0
+==> Recall                    : 98.81% ± 0.0
+==> ROC-AUC                   : 98.06% ± 0.0
+==> AUPR                      : 98.45% ± 0.0
+
+[2026-06-28 20:48:21] ..:: Running HGB ::..
+[2026-06-28 21:01:42] 
+..:: HGB Classifier Mean Results ::..
+==> Cross Validation Accuracy : 97.82% ± 0.13
+==> Test Accuracy             : 96.24% ± 0.0
+==> F1                        : 97.11% ± 0.0
+==> Precision                 : 94.38% ± 0.0
+==> Recall                    : 100.0% ± 0.0
+==> ROC-AUC                   : 99.78% ± 0.0
+==> AUPR                      : 99.87% ± 0.0
+
+[2026-06-28 21:01:43] ..:: End ML for r_dicho ::..
+[2026-06-28 21:01:43] ..:: Start ML for b_dicho ::..
+[2026-06-28 21:01:43] ..:: Running DT ::..
+[2026-06-28 21:03:03] 
+..:: DT Classifier Mean Results ::..
+==> Cross Validation Accuracy : 71.43% ± 15.3
+==> Test Accuracy             : 99.62% ± 0.0
+==> F1                        : 99.72% ± 0.0
+==> Precision                 : 99.45% ± 0.0
+==> Recall                    : 100.0% ± 0.0
+==> ROC-AUC                   : 99.41% ± 0.0
+==> AUPR                      : 99.73% ± 0.0
+
+[2026-06-28 21:03:03] ..:: Running LR ::..
+[2026-06-28 21:05:47] 
+..:: LR Classifier Mean Results ::..
+==> Cross Validation Accuracy : 70.28% ± 2.97
+==> Test Accuracy             : 81.95% ± 0.0
+==> F1                        : 86.44% ± 0.0
+==> Precision                 : 88.44% ± 0.0
+==> Recall                    : 84.53% ± 0.0
+==> ROC-AUC                   : 87.36% ± 0.0
+==> AUPR                      : 92.98% ± 0.0
+
+[2026-06-28 21:05:47] ..:: Running RF ::..
+[2026-06-28 21:07:58] 
+..:: RF Classifier Mean Results ::..
+==> Cross Validation Accuracy : 77.36% ± 16.22
+==> Test Accuracy             : 99.62% ± 0.0
+==> F1                        : 99.72% ± 0.0
+==> Precision                 : 99.45% ± 0.0
+==> Recall                    : 100.0% ± 0.0
+==> ROC-AUC                   : 99.41% ± 0.0
+==> AUPR                      : 99.73% ± 0.0
+
+[2026-06-28 21:07:58] ..:: Running SVM ::..
+[2026-06-28 21:12:27] 
+..:: SVM Classifier Mean Results ::..
+==> Cross Validation Accuracy : 61.61% ± 11.67
+==> Test Accuracy             : 80.45% ± 0.0
+==> F1                        : 85.39% ± 0.0
+==> Precision                 : 86.86% ± 0.0
+==> Recall                    : 83.98% ± 0.0
+==> ROC-AUC                   : 87.8% ± 0.0
+==> AUPR                      : 93.82% ± 0.0
+
+[2026-06-28 21:12:27] ..:: Running HGB ::..
+[2026-06-28 21:24:31] 
+..:: HGB Classifier Mean Results ::..
+==> Cross Validation Accuracy : 99.15% ± 0.0
+==> Test Accuracy             : 99.62% ± 0.0
+==> F1                        : 99.72% ± 0.0
+==> Precision                 : 99.45% ± 0.0
+==> Recall                    : 100.0% ± 0.0
+==> ROC-AUC                   : 100.0% ± 0.0
+==> AUPR                      : 100.0% ± 0.0
+
+[2026-06-28 21:24:32] ..:: End ML for b_dicho ::..
+[2026-06-28 22:12:28] ..:: Start Data_Labeling "Main_Data_new" by "['R2', 'B2']" ::..
+[2026-06-28 22:12:29] ..:: End Data_Labeling "Main_Data_new" by "['R2', 'B2']" ::..
+[2026-06-28 22:12:29] ..:: Start Data_Preparation "Main_Data_new" for r_dicho (HOLDOUT | random_state: 42 | preprocessing: MinMax) ::..
+[2026-06-28 22:12:29] ==> "Main_Data_new" shape: (969, 51)
+[2026-06-28 22:12:29] Using Hold-out (test_size=0.25)
+[2026-06-28 22:12:29] ==> Holdout >> train: (703, 51), test: (266, 51)
+[2026-06-28 22:12:29] ..:: End Data_Preparation for r_dicho ::..
+[2026-06-28 22:12:29] ..:: Start Data_Preparation "Main_Data_new" for b_dicho (HOLDOUT | random_state: 42 | preprocessing: MinMax) ::..
+[2026-06-28 22:12:29] ==> "Main_Data_new" shape: (969, 51)
+[2026-06-28 22:12:29] Using Hold-out (test_size=0.25)
+[2026-06-28 22:12:29] ==> Holdout >> train: (703, 51), test: (266, 51)
+[2026-06-28 22:12:29] ..:: End Data_Preparation for b_dicho ::..
+[2026-06-28 22:12:29] ..:: Start FP_Augmentation on "Main_Data_new" for r_dicho (mining: fpgrowth, mode: both, min_support: 0.15) ::..
+[2026-06-28 22:12:29]   -> Processing fold 1 ...
+[2026-06-28 22:12:34]     Found 3553 frequent itemset(s).
+[2026-06-28 22:12:50]     Generated 5872 rule feature(s).
+[2026-06-28 22:12:58]     Fold 1 augmented — train: (703, 18901), test: (266, 18901)
+[2026-06-28 22:12:58] ..:: End FP_Augmentation on "Main_Data_new" for r_dicho ::..
+[2026-06-28 22:12:58] ..:: Start FP_Augmentation on "Main_Data_new" for b_dicho (mining: fpgrowth, mode: both, min_support: 0.15) ::..
+[2026-06-28 22:12:58]   -> Processing fold 1 ...
+[2026-06-28 22:13:01]     Found 3641 frequent itemset(s).
+[2026-06-28 22:13:17]     Generated 6213 rule feature(s).
+[2026-06-28 22:13:25]     Fold 1 augmented — train: (703, 19759), test: (266, 19759)
+[2026-06-28 22:13:25] ..:: End FP_Augmentation on "Main_Data_new" for b_dicho ::..
+[2026-06-28 22:13:25] ..:: Start ML for r_dicho ::..
+[2026-06-28 22:13:25] ..:: Running DT ::..
+[2026-06-28 22:13:29] 
+..:: DT Classifier Mean Results ::..
+==> Cross Validation Accuracy : 80.22% ± 9.71
+==> Test Accuracy             : 93.98% ± 0.0
+==> F1                        : 95.35% ± 0.0
+==> Precision                 : 93.18% ± 0.0
+==> Recall                    : 97.62% ± 0.0
+==> ROC-AUC                   : 92.69% ± 0.0
+==> AUPR                      : 96.15% ± 0.0
+
+[2026-06-28 22:13:30] ..:: Running LR ::..
+[2026-06-28 22:13:31] 
+..:: LR Classifier Mean Results ::..
+==> Cross Validation Accuracy : 94.99% ± 0.57
+==> Test Accuracy             : 93.98% ± 0.0
+==> F1                        : 95.12% ± 0.0
+==> Precision                 : 97.5% ± 0.0
+==> Recall                    : 92.86% ± 0.0
+==> ROC-AUC                   : 98.35% ± 0.0
+==> AUPR                      : 98.45% ± 0.0
+
+[2026-06-28 22:13:31] ..:: Running RF ::..
+[2026-06-28 22:13:37] 
+..:: RF Classifier Mean Results ::..
+==> Cross Validation Accuracy : 94.35% ± 2.08
+==> Test Accuracy             : 96.99% ± 0.0
+==> F1                        : 97.63% ± 0.0
+==> Precision                 : 97.06% ± 0.0
+==> Recall                    : 98.21% ± 0.0
+==> ROC-AUC                   : 99.74% ± 0.0
+==> AUPR                      : 99.84% ± 0.0
+
+[2026-06-28 22:13:37] ..:: Running SVM ::..
+[2026-06-28 22:13:44] 
+..:: SVM Classifier Mean Results ::..
+==> Cross Validation Accuracy : 79.27% ± 17.63
+==> Test Accuracy             : 95.49% ± 0.0
+==> F1                        : 96.36% ± 0.0
+==> Precision                 : 98.15% ± 0.0
+==> Recall                    : 94.64% ± 0.0
+==> ROC-AUC                   : 98.7% ± 0.0
+==> AUPR                      : 98.88% ± 0.0
+
+[2026-06-28 22:13:44] ..:: Running HGB ::..
+[2026-06-28 22:14:16] 
+..:: HGB Classifier Mean Results ::..
+==> Cross Validation Accuracy : 97.68% ± 0.07
+==> Test Accuracy             : 96.24% ± 0.0
+==> F1                        : 97.11% ± 0.0
+==> Precision                 : 94.38% ± 0.0
+==> Recall                    : 100.0% ± 0.0
+==> ROC-AUC                   : 99.73% ± 0.0
+==> AUPR                      : 99.84% ± 0.0
+
+[2026-06-28 22:14:17] ..:: End ML for r_dicho ::..
+[2026-06-28 22:14:17] ..:: Start ML for b_dicho ::..
+[2026-06-28 22:14:17] ..:: Running DT ::..
+[2026-06-28 22:14:17] 
+..:: DT Classifier Mean Results ::..
+==> Cross Validation Accuracy : 71.38% ± 15.2
+==> Test Accuracy             : 99.25% ± 0.0
+==> F1                        : 99.45% ± 0.0
+==> Precision                 : 99.45% ± 0.0
+==> Recall                    : 99.45% ± 0.0
+==> ROC-AUC                   : 99.14% ± 0.0
+==> AUPR                      : 99.64% ± 0.0
+
+[2026-06-28 22:14:18] ..:: Running LR ::..
+[2026-06-28 22:14:19] 
+..:: LR Classifier Mean Results ::..
+==> Cross Validation Accuracy : 51.28% ± 3.14
+==> Test Accuracy             : 52.26% ± 0.0
+==> F1                        : 55.44% ± 0.0
+==> Precision                 : 75.96% ± 0.0
+==> Recall                    : 43.65% ± 0.0
+==> ROC-AUC                   : 69.62% ± 0.0
+==> AUPR                      : 79.54% ± 0.0
+
+[2026-06-28 22:14:20] ..:: Running RF ::..
+[2026-06-28 22:14:25] 
+..:: RF Classifier Mean Results ::..
+==> Cross Validation Accuracy : 92.39% ± 6.42
+==> Test Accuracy             : 99.25% ± 0.0
+==> F1                        : 99.45% ± 0.0
+==> Precision                 : 99.45% ± 0.0
+==> Recall                    : 99.45% ± 0.0
+==> ROC-AUC                   : 99.41% ± 0.0
+==> AUPR                      : 99.72% ± 0.0
+
+[2026-06-28 22:14:26] ..:: Running SVM ::..
+[2026-06-28 22:17:06] 
+..:: SVM Classifier Mean Results ::..
+==> Cross Validation Accuracy : 52.41% ± 3.46
+==> Test Accuracy             : 56.02% ± 0.0
+==> F1                        : 60.34% ± 0.0
+==> Precision                 : 78.07% ± 0.0
+==> Recall                    : 49.17% ± 0.0
+==> ROC-AUC                   : 68.76% ± 0.0
+==> AUPR                      : 80.51% ± 0.0
+
+[2026-06-28 22:17:06] ..:: Running HGB ::..
+[2026-06-28 22:17:37] 
+..:: HGB Classifier Mean Results ::..
+==> Cross Validation Accuracy : 99.15% ± 0.0
+==> Test Accuracy             : 99.62% ± 0.0
+==> F1                        : 99.72% ± 0.0
+==> Precision                 : 99.45% ± 0.0
+==> Recall                    : 100.0% ± 0.0
+==> ROC-AUC                   : 100.0% ± 0.0
+==> AUPR                      : 100.0% ± 0.0
+
+[2026-06-28 22:17:38] ..:: End ML for b_dicho ::..

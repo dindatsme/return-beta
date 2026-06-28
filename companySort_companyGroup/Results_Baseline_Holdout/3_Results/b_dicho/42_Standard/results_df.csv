@@ -1,0 +1,2 @@
+Algorithm,cross_validation_accuracy_mean,cross_validation_accuracy_std,accuracy_mean,accuracy_std,f1_mean,f1_std,precision_mean,precision_std,recall_mean,recall_std,specificity_mean,specificity_std,sensitivity_mean,sensitivity_std,mcc_mean,mcc_std,auc_roc_mean,auc_roc_std,aupr_mean,aupr_std,best_param_fold_1
+HGB,99.01,0.0,99.62,0.0,99.72,0.0,99.45,0.0,100.0,0.0,98.82,0.0,100.0,0.0,99.14,0.0,100.0,0.0,100.0,0.0,"{'learning_rate': 0.1, 'max_depth': 10, 'random_state': 42}"

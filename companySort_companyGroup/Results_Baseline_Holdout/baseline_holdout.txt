@@ -1,0 +1,109 @@
+
+[2026-06-27 12:41:08] ======================================================================
+[2026-06-27 12:41:08] 🚀 BASELINE HOLD-OUT EXPERIMENT
+[2026-06-27 12:41:08] Random State     : 42
+[2026-06-27 12:41:08] Test Size        : 0.25
+[2026-06-27 12:41:08] Preprocessing    : Standard
+[2026-06-27 12:41:08] FP Augmentation  : TIDAK DIGUNAKAN (Baseline)
+[2026-06-27 12:41:08] ======================================================================
+[2026-06-27 12:41:08] 1. Running Data Labeling...
+[2026-06-27 12:41:09] 2. Running Data Preparation (Hold-out)...
+[2026-06-27 12:41:09] 3. Running Machine Learning Models...
+[2026-06-27 12:45:14] ======================================================================
+[2026-06-27 12:45:14] 🚀 BASELINE HOLD-OUT EXPERIMENT
+[2026-06-27 12:45:14] Random State     : 42
+[2026-06-27 12:45:14] Test Size        : 0.25
+[2026-06-27 12:45:14] Preprocessing    : Standard
+[2026-06-27 12:45:14] FP Augmentation  : TIDAK DIGUNAKAN (Baseline)
+[2026-06-27 12:45:14] ======================================================================
+[2026-06-27 12:45:14] 1. Running Data Labeling...
+[2026-06-27 12:45:14] 2. Running Data Preparation (Hold-out)...
+[2026-06-27 12:45:14] 3. Running Machine Learning Models...
+[2026-06-27 12:45:32] 
+✅ BASELINE HOLD-OUT EXPERIMENT SELESAI!
+[2026-06-27 12:45:32] Total Waktu: 18.5 detik
+[2026-06-27 13:04:42] ======================================================================
+[2026-06-27 13:04:42] 🚀 BASELINE HOLD-OUT EXPERIMENT
+[2026-06-27 13:04:42] Random State     : 42
+[2026-06-27 13:04:42] Test Size        : 0.25
+[2026-06-27 13:04:42] Preprocessing    : Standard
+[2026-06-27 13:04:42] FP Augmentation  : TIDAK DIGUNAKAN (Baseline)
+[2026-06-27 13:04:42] ======================================================================
+[2026-06-27 13:04:42] 1. Running Data Labeling...
+[2026-06-27 13:04:43] 2. Running Data Preparation (Hold-out)...
+[2026-06-27 13:04:43] 3. Running Machine Learning Models...
+[2026-06-27 13:40:13] ======================================================================
+[2026-06-27 13:40:13] 🚀 BASELINE HOLD-OUT EXPERIMENT
+[2026-06-27 13:40:13] Random State     : 42
+[2026-06-27 13:40:13] Test Size        : 0.25
+[2026-06-27 13:40:13] Preprocessing    : Standard
+[2026-06-27 13:40:13] FP Augmentation  : TIDAK DIGUNAKAN (Baseline)
+[2026-06-27 13:40:13] ======================================================================
+[2026-06-27 13:40:13] 1. Running Data Labeling...
+[2026-06-27 13:40:14] 2. Running Data Preparation (Hold-out)...
+[2026-06-27 13:40:14] 3. Running Machine Learning Models...
+[2026-06-27 13:42:33] ======================================================================
+[2026-06-27 13:42:33] 🚀 BASELINE HOLD-OUT EXPERIMENT
+[2026-06-27 13:42:33] Random State     : 42
+[2026-06-27 13:42:33] Test Size        : 0.25
+[2026-06-27 13:42:33] Preprocessing    : Standard
+[2026-06-27 13:42:33] FP Augmentation  : TIDAK DIGUNAKAN (Baseline)
+[2026-06-27 13:42:33] ======================================================================
+[2026-06-27 13:42:33] 1. Running Data Labeling...
+[2026-06-27 13:42:35] 2. Running Data Preparation (Hold-out)...
+[2026-06-27 13:42:35] 3. Running Machine Learning Models...
+[2026-06-27 13:42:59] 
+BASELINE HOLD-OUT EXPERIMENT SELESAI!
+[2026-06-27 13:42:59] Total Waktu: 25.94 detik
+[2026-06-27 13:53:13] ======================================================================
+[2026-06-27 13:53:13] 🚀 BASELINE HOLD-OUT EXPERIMENT
+[2026-06-27 13:53:13] Random State     : 42
+[2026-06-27 13:53:13] Test Size        : 0.25
+[2026-06-27 13:53:13] Preprocessing    : Standard
+[2026-06-27 13:53:13] FP Augmentation  : TIDAK DIGUNAKAN (Baseline)
+[2026-06-27 13:53:13] ======================================================================
+[2026-06-27 13:53:13] 1. Running Data Labeling...
+[2026-06-27 13:53:15] 2. Running Data Preparation (Hold-out)...
+[2026-06-27 13:53:15] 3. Running Machine Learning Models...
+[2026-06-27 13:53:36] 
+BASELINE HOLD-OUT EXPERIMENT SELESAI!
+[2026-06-27 13:53:36] Total Waktu: 22.92 detik
+[2026-06-28 11:10:21] ======================================================================
+[2026-06-28 11:10:21] BASELINE HOLD-OUT EXPERIMENT
+[2026-06-28 11:10:21] Random State     : 42
+[2026-06-28 11:10:21] Test Size        : 0.25
+[2026-06-28 11:10:21] Preprocessing    : Standard
+[2026-06-28 11:10:21] FP Augmentation  : TIDAK DIGUNAKAN (Baseline)
+[2026-06-28 11:10:21] ======================================================================
+[2026-06-28 11:10:21] 1. Running Data Labeling...
+[2026-06-28 11:10:21] 2. Running Data Preparation (Hold-out)...
+[2026-06-28 11:10:22] 3. Running Machine Learning Models...
+[2026-06-28 11:10:45] 
+BASELINE HOLD-OUT EXPERIMENT SELESAI!
+[2026-06-28 11:10:45] Total Waktu: 24.26 detik
+[2026-06-28 19:24:59] ======================================================================
+[2026-06-28 19:24:59] BASELINE HOLD-OUT EXPERIMENT
+[2026-06-28 19:24:59] Random State     : 42
+[2026-06-28 19:24:59] Test Size        : 0.25
+[2026-06-28 19:24:59] Preprocessing    : Standard
+[2026-06-28 19:24:59] FP Augmentation  : TIDAK DIGUNAKAN (Baseline)
+[2026-06-28 19:24:59] ======================================================================
+[2026-06-28 19:24:59] 1. Running Data Labeling...
+[2026-06-28 19:25:00] 2. Running Data Preparation (Hold-out)...
+[2026-06-28 19:25:00] 3. Running Machine Learning Models...
+[2026-06-28 19:30:31] 
+BASELINE HOLD-OUT EXPERIMENT SELESAI!
+[2026-06-28 19:30:31] Total Waktu: 331.89 detik
+[2026-06-28 19:32:55] ======================================================================
+[2026-06-28 19:32:55] BASELINE HOLD-OUT EXPERIMENT
+[2026-06-28 19:32:55] Random State     : 42
+[2026-06-28 19:32:55] Test Size        : 0.25
+[2026-06-28 19:32:55] Preprocessing    : MinMax
+[2026-06-28 19:32:55] FP Augmentation  : TIDAK DIGUNAKAN (Baseline)
+[2026-06-28 19:32:55] ======================================================================
+[2026-06-28 19:32:55] 1. Running Data Labeling...
+[2026-06-28 19:32:56] 2. Running Data Preparation (Hold-out)...
+[2026-06-28 19:32:56] 3. Running Machine Learning Models...
+[2026-06-28 19:37:05] 
+BASELINE HOLD-OUT EXPERIMENT SELESAI!
+[2026-06-28 19:37:05] Total Waktu: 250.05 detik

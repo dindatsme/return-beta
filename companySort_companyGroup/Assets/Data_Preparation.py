@@ -27,11 +27,9 @@ class Data_Preparation:
             tmp_path = f'{self.oPath}/{target}/{random_state}_{preprocessing_method}'
             train_folds_path = f'{tmp_path}/train_folds'
             test_folds_path = f'{tmp_path}/test_folds'
-            ranked_features_path = f'{tmp_path}/ranked_features/'
 
             self.create_outPutFolder(train_folds_path)
             self.create_outPutFolder(test_folds_path)
-            self.create_outPutFolder(ranked_features_path)
             
             unWanted_columns = index_columns+labeling_columns+target_columns
             X = df.drop(unWanted_columns, axis=1)
@@ -76,17 +74,7 @@ class Data_Preparation:
                     df_train.to_csv(f'{train_folds_path}/fold_{fold_number+1}.csv', index=False)
                     df_test.to_csv(f'{test_folds_path}/fold_{fold_number+1}.csv', index=False)  
                         
-                    # Feature Ranking KBest
-                    self.Log(f'..:: Start KBest Feature Ranking on Fold {fold_number+1} ::..')
-                    KBest_finalScores = self.KBest_ranking(
-                        df_train, n_features, target, unWanted_columns,
-                        fold_number+1, ranked_features_path, kf, group_column
-                    )
-                    self.Log(f'==> Final KBest Ranked Features for Fold {fold_number}:')
-                    self.Log(f'{KBest_finalScores}')
-                    self.Log(f'..:: End KBest Feature Ranking on Fold {fold_number+1} ::..')
-
-
+                 
             else:
                 for fold_number, (train_index, test_index) in enumerate(kf.split(X, y)):
 
@@ -124,17 +112,7 @@ class Data_Preparation:
 
                     df_train.to_csv(f'{train_folds_path}/fold_{fold_number+1}.csv', index=False)
                     df_test.to_csv(f'{test_folds_path}/fold_{fold_number+1}.csv', index=False)  
-                        
-                    # Feature Ranking KBest
-                    self.Log(f'..:: Start KBest Feature Ranking on Fold {fold_number+1} ::..')
-                    KBest_finalScores = self.KBest_ranking(
-                        df_train, n_features, target, unWanted_columns,
-                        fold_number+1, ranked_features_path, kf, group_column
-                    )
-                    self.Log(f'==> Final KBest Ranked Features for Fold {fold_number}:')
-                    self.Log(f'{KBest_finalScores}')
-                    self.Log(f'..:: End KBest Feature Ranking on Fold {fold_number+1} ::..')
-
+                    
             self.Log(f'..:: End Data_Preparation \"{file_name}\" for {target} with '+
                     f'(random_state: {random_state}, Scaling_method: {preprocessing_method}) ::..')
             
@@ -163,73 +141,7 @@ class Data_Preparation:
         final_scores = final_scores.sort_values(by=['Mode', 'Mean', "Std"])
         final_scores.reset_index(drop=True, inplace=True)
         return final_scores
-
     
-
-    def KBest_ranking(
-            self, df, n_features, target_column, unWanted_columns,
-            fold_number, outPut_path, kf, group_column
-    ):
-        features = [x for x in df.columns if x not in unWanted_columns]
-        final_scores = pd.DataFrame(data={'Features': features})
-
-        KBest_ouputs = []
-
-        X = df[features]
-        y = df[target_column]
-        
-        if group_column != None:
-            wantedGroups = df["CompanyId"]
-            for sample_index, _ in kf.split(X, y, groups=wantedGroups):
-                sample_X = X.iloc[sample_index]
-                sample_y = y.iloc[sample_index]
-
-                # Create the SelectKBest object with the f_regression scoring function
-                selector = SelectKBest(score_func=f_regression, k=n_features)
-
-                # Apply feature selection to the dataset
-                X_new = selector.fit_transform(sample_X, sample_y)
-
-                # Get the scores of the selected features
-                feature_scores = selector.scores_
-
-                # Get the indices of the selected features sorted by score (descending order)
-                selected_feature_indices = np.argsort(feature_scores)[::-1][:n_features]
-
-                # Get the names of the selected features
-                selected_features = final_scores.Features[selected_feature_indices]
-
-                # Print the ranked feature names and scores
-                KBest_ouputs.append(selected_features.tolist())
-
-        else:
-            for sample_index, _ in kf.split(X, y):
-                sample_X = X.iloc[sample_index]
-                sample_y = y.iloc[sample_index]
-
-                # Create the SelectKBest object with the f_regression scoring function
-                selector = SelectKBest(score_func=f_regression, k=n_features)
-
-                # Apply feature selection to the dataset
-                X_new = selector.fit_transform(sample_X, sample_y)
-
-                # Get the scores of the selected features
-                feature_scores = selector.scores_
-
-                # Get the indices of the selected features sorted by score (descending order)
-                selected_feature_indices = np.argsort(feature_scores)[::-1][:n_features]
-
-                # Get the names of the selected features
-                selected_features = final_scores.Features[selected_feature_indices]
-
-                # Print the ranked feature names and scores
-                KBest_ouputs.append(selected_features.tolist())          
-
-        final_scores = self.get_finalScores(KBest_ouputs, features)
-        final_scores.to_csv(f"{outPut_path}/KBest_fold_{fold_number}.csv", index=False)
-                
-        return final_scores
-
 
     def create_outPutFolder(self, tmp_path):
         if not os.path.isdir(tmp_path):

@@ -1,0 +1,53 @@
+
+[2026-06-28 12:07:09] ================================================================================
+[2026-06-28 12:07:09] EXPERIMENT WITH FP AUGMENTATION + HOLD-OUT
+[2026-06-28 12:07:09] Random State     : 42
+[2026-06-28 12:07:09] Test Size        : 0.25
+[2026-06-28 12:07:09] Preprocessing    : Standard
+[2026-06-28 12:07:09] FP Augmentation  : AKTIF (fpgrowth)
+[2026-06-28 12:07:09] ================================================================================
+[2026-06-28 12:07:09] 1. Running Data Labeling...
+[2026-06-28 12:07:10] 2. Running Data Preparation (Hold-out)...
+[2026-06-28 12:07:10] 3. Running Frequent Pattern Augmentation...
+[2026-06-28 12:09:47] ================================================================================
+[2026-06-28 12:09:47] EXPERIMENT WITH FP AUGMENTATION + HOLD-OUT
+[2026-06-28 12:09:47] Random State     : 42
+[2026-06-28 12:09:47] Test Size        : 0.25
+[2026-06-28 12:09:47] Preprocessing    : Standard
+[2026-06-28 12:09:47] FP Augmentation  : AKTIF (fpgrowth)
+[2026-06-28 12:09:47] ================================================================================
+[2026-06-28 12:09:47] 1. Running Data Labeling...
+[2026-06-28 12:09:48] 2. Running Data Preparation (Hold-out)...
+[2026-06-28 12:09:48] 3. Running Frequent Pattern Augmentation...
+[2026-06-28 12:10:27] 4. Running Machine Learning Models...
+[2026-06-28 12:25:52] 
+EXPERIMENT WITH FP AUGMENTATION + HOLD-OUT SELESAI!
+[2026-06-28 12:25:52] Total Waktu: 964.72 detik
+[2026-06-28 20:39:47] ================================================================================
+[2026-06-28 20:39:47] EXPERIMENT WITH FP AUGMENTATION + HOLD-OUT
+[2026-06-28 20:39:47] Random State     : 42
+[2026-06-28 20:39:47] Test Size        : 0.25
+[2026-06-28 20:39:47] Preprocessing    : Standard
+[2026-06-28 20:39:47] FP Augmentation  : AKTIF (fpgrowth)
+[2026-06-28 20:39:47] ================================================================================
+[2026-06-28 20:39:47] 1. Running Data Labeling...
+[2026-06-28 20:39:47] 2. Running Data Preparation (Hold-out)...
+[2026-06-28 20:39:48] 3. Running Frequent Pattern Augmentation...
+[2026-06-28 20:40:26] 4. Running Machine Learning Models...
+[2026-06-28 21:24:32] 
+EXPERIMENT WITH FP AUGMENTATION + HOLD-OUT SELESAI!
+[2026-06-28 21:24:32] Total Waktu: 2685.65 detik
+[2026-06-28 22:12:28] ================================================================================
+[2026-06-28 22:12:28] EXPERIMENT WITH FP AUGMENTATION + HOLD-OUT
+[2026-06-28 22:12:28] Random State     : 42
+[2026-06-28 22:12:28] Test Size        : 0.25
+[2026-06-28 22:12:28] Preprocessing    : MinMax
+[2026-06-28 22:12:28] FP Augmentation  : AKTIF (fpgrowth)
+[2026-06-28 22:12:28] ================================================================================
+[2026-06-28 22:12:28] 1. Running Data Labeling...
+[2026-06-28 22:12:29] 2. Running Data Preparation (Hold-out)...
+[2026-06-28 22:12:29] 3. Running Frequent Pattern Augmentation...
+[2026-06-28 22:13:25] 4. Running Machine Learning Models...
+[2026-06-28 22:17:38] 
+EXPERIMENT WITH FP AUGMENTATION + HOLD-OUT SELESAI!
+[2026-06-28 22:17:38] Total Waktu: 310.14 detik
